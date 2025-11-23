@@ -8,7 +8,7 @@ if ($id < 1) {
     header("location: index.php");
 }
 
-$sql = "SELECT * FROM posts WHERE id = '$id'";
+$sql = "SELECT posts.*, categories.name AS category_name FROM posts LEFT JOIN categories ON posts.category_id = categories.id WHERE posts.id = '$id'";
 $result = mysqli_query($dbcon, $sql);
 if (mysqli_num_rows($result) == 0) {
     header("location: index.php");
@@ -19,6 +19,7 @@ $title = htmlspecialchars($row['title']);
 $description = htmlspecialchars($row['description']);
 $slug = htmlspecialchars($row['slug']);
 $permalink = "p/". $id."/".$slug;
+
 
 if (isset($_POST['upd'])) {
     $id = $_POST['id'];
@@ -51,6 +52,16 @@ if (isset($_POST['upd'])) {
             <div class="form-group">
                 <label class="form-label">Title</label>
                 <input type="text" class="form-control" name="title" value="<?php echo $title; ?>">
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Category</label>
+                <select name="category_id" class="form-control" required>
+                
+                    <?php foreach ($result as $category): ?>
+                        <option value="<?php echo $category['id']; ?>"><?php echo $category['category_name']; ?></option>
+                    <?php endforeach; ?>
+                </select>
             </div>
             
             <div class="form-group">

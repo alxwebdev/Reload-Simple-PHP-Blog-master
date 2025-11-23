@@ -22,7 +22,7 @@ if (!empty(SITE_ROOT)){
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     
     <!-- Custom Styles -->
-    <link rel="stylesheet" type="text/css" href="<?=$url_path?>style.css">
+    <link rel="stylesheet" type="text/css" href="<?=$url_path?>style.css?v=<?=time()?>">
     
     <!-- Trumbowyg Editor -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.19.1/ui/trumbowyg.min.css">

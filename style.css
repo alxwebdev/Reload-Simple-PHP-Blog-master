@@ -253,6 +253,18 @@ img {
     font-weight: 500;
 }
 
+/* Post Category */
+.post-category {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background-color: rgba(37, 99, 235, 0.1);
+    color: var(--accent-color);
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: var(--spacing-sm);
+}
+
 /* Pagination */
 .pagination {
     display: flex;
