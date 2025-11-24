@@ -47,7 +47,7 @@ if (mysqli_num_rows($result) < 1) {
 
     $id = htmlspecialchars($row['id']);
     $title = htmlspecialchars($row['title']);
-    $des = htmlspecialchars(strip_tags($row['description']));
+    $des = htmlspecialchars(limitText($row['description']));
     $slug = htmlspecialchars($row['slug']);
     $time = htmlspecialchars($row['date']);
     $category_name = htmlspecialchars($row['category_name']);
@@ -57,7 +57,7 @@ if (mysqli_num_rows($result) < 1) {
     echo '<div class="post-card">';
     echo "<h3 class='post-title'><a href='$permalink'>$title</a></h3>";
     echo "<p class='post-category'>$category_name</p>";
-    echo "<p class='post-excerpt'>" . substr($des, 0, 100) . "...</p>";
+    echo "<p class='post-excerpt'>" . $des . "</p>";
 
     echo '<div class="post-meta">';
     echo "<a href='$permalink' class='read-more'>Read more &rarr;</a>";

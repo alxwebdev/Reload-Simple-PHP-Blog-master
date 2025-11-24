@@ -16,3 +16,7 @@ function slug($string){
     return $slug;
 }
 
+function limitText($text, $limit = 200, $end = '...') {
+    return mb_strimwidth(strip_tags($text), 0, $limit, $end);
+}
+

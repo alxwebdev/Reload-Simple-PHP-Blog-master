@@ -417,3 +417,11 @@ img {
     font-size: 0.9rem;
     color: var(--text-secondary);
 }
+
+.post-excerpt {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    /* show max 3 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
