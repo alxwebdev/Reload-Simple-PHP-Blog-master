@@ -51,13 +51,14 @@ if (mysqli_num_rows($result) < 1) {
     $slug = htmlspecialchars($row['slug']);
     $time = htmlspecialchars($row['date']);
     $category_name = htmlspecialchars($row['category_name']);
+    $category_id = htmlspecialchars($row['category_id']);
 
     $permalink = "p/".$id ."/".$slug;
 
     echo '<div class="post-card">';
     echo "<h3 class='post-title'><a href='$permalink'>$title</a></h3>";
-    echo "<p class='post-category'>$category_name</p>";
-    echo "<p class='post-excerpt'>" . $des . "</p>";
+    echo "<a href='category.php?id=$category_id' class='post-category-link'><p class='post-category'>$category_name</p></a>";
+    echo "<p class='post-excerpt'>$des</p>";
 
     echo '<div class="post-meta">';
     echo "<a href='$permalink' class='read-more'>Read more &rarr;</a>";

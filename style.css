@@ -420,7 +420,7 @@ img {
 
 .post-excerpt {
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    line-clamp: 3;
     /* show max 3 lines */
     -webkit-box-orient: vertical;
     overflow: hidden;
