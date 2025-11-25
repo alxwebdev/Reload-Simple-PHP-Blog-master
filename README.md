@@ -7,8 +7,7 @@ New features added:
 
 # Screenshots
 
-![screenshot_01]()
-![screenshot_02]()
+![screenshot_01](https://github.com/alxwebdev/Reload-Simple-PHP-Blog-master/blob/main/Screenshot%202025-11-25%20at%2023-08-54%20PHP%20Blog.png)
 
 
 # Simple-PHP-Blog
