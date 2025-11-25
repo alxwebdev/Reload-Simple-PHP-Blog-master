@@ -1,3 +1,16 @@
+# Downloaded the repository from https://github.com/Philipinho/Simple-PHP-Blog and tweaked it a bit to fit my needs.
+New features added:
+- new layout
+- category functionality
+- dark mode
+- security improvements
+
+# Screenshots
+
+![screenshot_01]()
+![screenshot_02]()
+
+
 # Simple-PHP-Blog
 Simple blog system for personal development using procedural PHP and MYSQL.
 
@@ -34,7 +47,3 @@ Password: 12345
 There is no way to update the admin password through the dashboard yet.  
 To change your password, hash your password with PHP's `password_hash()` function. Then update the database value with the new password hash.   
 
-# Screenshots
-
-![screenshot_01](https://user-images.githubusercontent.com/16838612/66112823-78d32e00-e5c3-11e9-9b38-93ba488071e0.jpg)
-![screenshot_02](https://user-images.githubusercontent.com/16838612/66112874-8d172b00-e5c3-11e9-97e4-590da5675100.jpg)
